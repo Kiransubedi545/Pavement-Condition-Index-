@@ -1,5 +1,5 @@
+flaml==2.1.1
 streamlit
-flaml
 joblib
 numpy
 pandas
