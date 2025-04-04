@@ -55,8 +55,8 @@ if st.button("Predict PCI"):
     st.success(f"✅ Predicted PCI: {pci_score:.2f}")
     st.info(f"🏷️ Condition Category: **{pci_cat}**")
 
-# Footer
+# Footer (single line)
 st.markdown("""
 ---
-👷‍♂️ Developed by **Kiran Subedi**  🌐 Website: https://kiransubedi545.com.np/ 📧 Email: Kiransubedi545@gmail.com
+👷‍♂️ Developed by **Kiran Subedi** | 🌐 [kiransubedi545.com.np](https://kiransubedi545.com.np/) | 📧 [Kiransubedi545@gmail.com](mailto:Kiransubedi545@gmail.com)
 """)
