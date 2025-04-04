@@ -1,6 +1,6 @@
-flaml==2.1.1
 streamlit
+xgboost
 joblib
-numpy
 pandas
+numpy
 scikit-learn
