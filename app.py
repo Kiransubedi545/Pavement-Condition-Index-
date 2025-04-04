@@ -27,6 +27,20 @@ features = [
     'POTHOLES_A_L', 'POTHOLES_A_M', 'PATCH_A_H', 'PATCH_A_M'
 ]
 
+# Full guidance for each input
+guidance = {
+    'GATOR_CRACK_A_L': "Light severity alligator cracking (area in sq.m)",
+    'GATOR_CRACK_A_M': "Medium severity alligator cracking (area in sq.m)",
+    'GATOR_CRACK_A_H': "High severity alligator cracking (area in sq.m)",
+    'BLK_CRACK_A_H': "High severity block cracking (area in sq.m)",
+    'TRANS_CRACK_L_M': "Medium severity transverse cracking (length in meters)",
+    'TRANS_CRACK_L_H': "High severity transverse cracking (length in meters)",
+    'POTHOLES_A_L': "Low severity potholes (area in sq.m)",
+    'POTHOLES_A_M': "Medium severity potholes (area in sq.m)",
+    'PATCH_A_H': "High severity patching (area in sq.m)",
+    'PATCH_A_M': "Medium severity patching (area in sq.m)"
+}
+
 inputs = {}
 cols = st.columns(2)
 for i, feature in enumerate(features):
@@ -40,3 +54,10 @@ if st.button("Predict PCI"):
     pci_cat = pci_to_category(pci_score)
     st.success(f"✅ Predicted PCI: {pci_score:.2f}")
     st.info(f"🏷️ Condition Category: **{pci_cat}**")
+
+st.markdown("""
+---
+👷‍♂️ Developed by **Kiran Subedi**  
+🌐 Website: [https://kiransubedi545.com.np/](https://kiransubedi545.com.np/)  
+📧 Email: [Kiransubedi545@gmail.com](mailto:Kiransubedi545@gmail.com)
+""")
