@@ -1,5 +1,4 @@
 import pandas as pd
-from flaml import AutoML
 import joblib
 
 # Load your dataset
