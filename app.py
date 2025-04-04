@@ -21,6 +21,21 @@ def pci_to_category(pci):
 st.set_page_config(page_title="PCI Prediction App", layout="centered")
 st.title("🛣️ Pavement Condition Index (PCI) Prediction")
 
+# Disclaimer
+with st.expander("📌 Input Guidelines & Disclaimer"):
+    st.markdown("""
+    - All distress data entered must represent a **minimum pavement sample unit of 20 m²**, as defined by ASTM D6433.
+    - It is recommended to standardize input based on a **49.4 m²** unit.
+    - Area-based distresses (e.g., alligator cracking, patching, potholes) must be reported in **square meters (m²)**.
+    - Length-based distresses (e.g., transverse cracks) must be recorded in **meters (m)**.
+    - This tool is intended for educational and decision-support purposes only.
+    """)
+
+st.markdown("""
+Enter values for the pavement distress features below. 
+Each value represents area (in sq.m) or length (in meters) depending on the distress type.
+""")
+
 features = [
     'GATOR_CRACK_A_L', 'GATOR_CRACK_A_M', 'GATOR_CRACK_A_H',
     'BLK_CRACK_A_H', 'TRANS_CRACK_L_M', 'TRANS_CRACK_L_H',
