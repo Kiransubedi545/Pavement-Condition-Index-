@@ -1,6 +1,6 @@
 import pandas as pd
 import joblib
-
+model = joblib.load("flaml_pci_model.pkl")
 # Load your dataset
 df = pd.read_csv(r'C:\Users\kiran\Desktop\data\Flexible Pavement\Pavement Asset Management\PCI_Result.csv').fillna(0)
 
