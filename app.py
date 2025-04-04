@@ -44,9 +44,15 @@ guidance = {
 inputs = {}
 cols = st.columns(2)
 for i, feature in enumerate(features):
-    inputs[feature] = cols[i % 2].number_input(
-        feature.replace("_", " "), min_value=0.0, value=0.0, step=1.0
-    )
+    with cols[i % 2]:
+        inputs[feature] = st.number_input(
+            label=feature.replace('_', ' '),
+            min_value=0.0,
+            value=0.0,
+            step=1.0,
+            help=guidance[feature],
+            key=feature
+        )
 
 if st.button("Predict PCI"):
     x = np.array([list(inputs.values())])
