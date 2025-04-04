@@ -32,8 +32,7 @@ with st.expander("📌 Input Guidelines & Disclaimer"):
     """)
 
 st.markdown("""
-Enter values for the pavement distress features below. 
-Each value represents area (in sq.m) or length (in meters) depending on the distress type.
+Enter distress values per sample unit: use **sq.m** for area and **m** for length.
 """)
 
 features = [
